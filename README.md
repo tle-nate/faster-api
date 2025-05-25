@@ -1,4 +1,4 @@
-# Faster API
+# TLE Faster API
 
 **Faster API** is a Python CLI tool for scaffolding and managing **FastAPI** projects with a Django-inspired developer experience. It boosts productivity for large-scale projects by offering modular project structure, built-in user authentication, and out-of-the-box support for PostgreSQL via Docker.
 
