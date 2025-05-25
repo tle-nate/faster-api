@@ -1,0 +1,19 @@
+# The SolarRain API uses PostgreSQL and Redis. 
+# This docker setup can be used in development to start the services locally.
+
+services:
+  app_db:
+    image: postgres:15
+    container_name:  <<PROJECT_NAME>>_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_password
+      POSTGRES_DB:  <<PROJECT_NAME>>_db
+    ports:
+      - "<<DB_PORT>>:5432"
+    volumes:
+      -  <<PROJECT_NAME>>_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  <<PROJECT_NAME>>_postgres_data:
